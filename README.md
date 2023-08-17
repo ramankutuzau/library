@@ -17,33 +17,29 @@ Backend: Python (Django)
 Frontend: JavaScript, Bootstrap 5 (модальные окна)
 База данных: SQLite (по умолчанию в Django)
 Администрирование: Логин - admin, Пароль - test
+
 Запуск Приложения
 Установка Django: Если у вас еще нет Django, вы можете установить его с помощью команды:
 
-bash
-Copy code
+
 pip install django
 Скачивание Проекта: Скачайте проект из репозитория:
 
-bash
-Copy code
+
 git clone https://github.com/ramankutuzau/library.git
 Создание и Применение Миграций: Перейдите в папку с проектом и выполните команды:
 
-bash
-Copy code
-cd library-service
+
+cd library
 python manage.py makemigrations
 python manage.py migrate
 Запуск Сервера: Запустите встроенный сервер разработки Django:
-
-bash
-Copy code
 python manage.py runserver
+
+
+
+
 Доступ к Админке: Перейдите в браузере по адресу http://86.57.178.104:11111/admin/. Войдите, используя логин admin и пароль test.
 
 Запуск Приложения: Перейдите в браузере по адресу http://86.57.178.104:11111 для доступа к вашему приложению "Библиотека".
-
-Выгрузка базы данных
-База данных проекта доступна для скачивания по ссылке. Примените ее в своей системе управления базами данных (MySQL, SQLite и т.д.) для использования полного функционала сервиса.
 
