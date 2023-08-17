@@ -7,10 +7,12 @@ from .models import Reader
 
 
 
-# class ReaderRegistrationForm(forms.ModelForm):
-#     class Meta:
-#         model = Reader
-#         fields = ['first_name', 'last_name', ]
-#
-# class ReturnBookForm(forms.Form):
-#     book_code = forms.CharField(label='Код книги')
+class ReaderRegisterForm(forms.ModelForm):
+    class Meta:
+        model = Reader
+        fields = ['first_name', 'last_name', 'middle_name']
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control from-input', 'required': 'required',}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'required': 'required'}),
+            'middle_name': forms.TextInput(attrs={'class': 'form-control', 'required': 'required'}),
+        }
