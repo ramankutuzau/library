@@ -18,24 +18,15 @@ Frontend: JavaScript, Bootstrap 5 (модальные окна)
 База данных: SQLite (по умолчанию в Django)
 Администрирование: Логин - admin, Пароль - test
 
-Запуск Приложения
-Установка Django: Если у вас еще нет Django, вы можете установить его с помощью команды:
-
-
+Запуск Приложения.
+python3 -m venv env
+. env\scripts\activate
 pip install django
-Скачивание Проекта: Скачайте проект из репозитория:
-
-
 git clone https://github.com/ramankutuzau/library.git
-Создание и Применение Миграций: Перейдите в папку с проектом и выполните команды:
-
-
 cd library
 python manage.py makemigrations
 python manage.py migrate
-Запуск Сервера: Запустите встроенный сервер разработки Django:
 python manage.py runserver
-
 
 
 
