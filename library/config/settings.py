@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@(8#ujmv8iqki5b@&fhsu$ff+spnahk(5w86cvri*&%4)_&%$7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.201', '86.57.178.104']
 
 
 
@@ -123,7 +123,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-
+CORS_ALLOW_CREDENTIALS = True
+CSRF_TRUSTED_ORIGINS = ['http://86.57.178.104:11111', 'http://192.168.1.201:3003',]
 
 
 # Default primary key field type
