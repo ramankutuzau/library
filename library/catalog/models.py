@@ -3,11 +3,11 @@ from django.db import models
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=255, blank=True, null=True)
-    last_name = models.CharField(max_length=255, blank=True, null=True)
+    first_name = models.CharField(max_length=255, blank=True, null=True, verbose_name='Имя')
+    last_name = models.CharField(max_length=255, blank=True, null=True, verbose_name='Фамилия')
 
     def __str__(self):
-        return f'Автор № {self.pk} Имя: {self.first_name} {self.last_name}'
+        return f'{self.first_name} {self.last_name}'
 
     class Meta:
         verbose_name = 'Автор'
@@ -16,9 +16,9 @@ class Author(models.Model):
 # class BookHistory()
 class Book(models.Model):
     in_stock = models.BooleanField(default=True)
-    code = models.CharField(max_length=255, blank=True, null=True)
-    title = models.CharField(max_length=255, blank=True, null=True)
-    author = models.ForeignKey(Author, on_delete=models.SET_NULL, blank=True, null=True)
+    code = models.CharField(max_length=255, blank=True, null=True, verbose_name='Код')
+    title = models.CharField(max_length=255, blank=True, null=True, verbose_name='Название')
+    author = models.ForeignKey(Author, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Автор')
 
     def __str__(self):
         return f'Книга № {self.pk} Название: {self.title}, Автор: {self.author}'
